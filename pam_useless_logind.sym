@@ -1,0 +1,7 @@
+
+{
+global:
+	pam_useless_logind_close;
+	pam_useless_logind_open;
+local: *;
+};

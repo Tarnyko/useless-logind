@@ -1,0 +1,7 @@
+[Unit]
+Description=Useless Login Service
+
+[Service]
+ExecStart=@systemdsystemunitdir@/useless-logind
+Restart=always
+RestartSec=0
