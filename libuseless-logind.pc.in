@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: libuseless-logind
+Description: library for the useless-logind daemon
+Version: 0.1
+Cflags: -I${includedir}
+Libs: -L${libdir} -luseless-logind
