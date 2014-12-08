@@ -24,7 +24,7 @@ lib_LTLIBRARIES += libuseless-logind.la
 libuseless_logind_la_LDFLAGS = -export-dynamic
 libuseless_logind_la_CPPFLAGS = $(AM_CPPFLAGS)
 libuseless_logind_la_CFLAGS = $(AM_CFLAGS)
-libuseless_logind_la_LDADD =
+libuseless_logind_la_LIBADD =
 
 libuseless_logind_la_SOURCES =			\
 	libuseless-logind.c

@@ -18,7 +18,7 @@ lib_LTLIBRARIES += libsystemd-login.la
 libsystemd_login_la_LDFLAGS = -export-dynamic
 libsystemd_login_la_CPPFLAGS = $(AM_CPPFLAGS)
 libsystemd_login_la_CFLAGS = $(AM_CFLAGS)
-libsystemd_login_la_LDADD = libuseless-logind.la
+libsystemd_login_la_LIBADD = libuseless-logind.la
 
 libsystemd_login_la_SOURCES =			\
 	sd-login.c

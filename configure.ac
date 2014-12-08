@@ -38,12 +38,12 @@ AC_CHECK_HEADERS([security/pam_modules.h security/pam_ext.h],
 AC_CHECK_LIB([pam], [pam_get_user],
              [have_pam=yes],
              [AC_MSG_ERROR([Error : libpam not found !])])
-AC_MSG_RESULT([$have_pam])
 if test x$have_pam = xyes; then
 	PAM_LIBS="-lpam"
 else
 	AC_ERROR([useless-logind requires PAM to build ! Exiting...])
 AC_SUBST(PAM_LIBS)
+fi
 
 # Treat configure-time options
 AC_ARG_ENABLE(systemd-compatibility,
@@ -56,12 +56,7 @@ if test x$enable_systemd_compatibility = xyes; then
 fi
 
 # Define files to generate
-if test x$enable_systemd_compatibility = xyes; then
-	systemd_config_files="systemd-compat/Makefile systemd-compat/libsystemd-login.pc"
-else
-	systemd_config_files=""
-fi
-AC_CONFIG_FILES([Makefile useless-logind.service libuseless-logind.pc $systemd_config_files])
+AC_CONFIG_FILES([Makefile libuseless-logind.pc systemd-compat/Makefile systemd-compat/libsystemd-login.pc data/useless-logind.service])
 
 # Finish
 AC_OUTPUT
