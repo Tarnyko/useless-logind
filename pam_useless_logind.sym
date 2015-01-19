@@ -1,7 +1,7 @@
 
 {
 global:
-	pam_useless_logind_close;
-	pam_useless_logind_open;
+	pam_sm_close_session;
+	pam_sm_open_session;
 local: *;
 };
